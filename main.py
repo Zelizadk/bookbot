@@ -8,6 +8,11 @@ def word_count(Book):
             letters[letter] = 1
     return letters
 
+def letter_sort(let_dict):
+    for letter in let_dict:
+        if letter.isalpha() == True:
+            print(letter)
+
 def main():
     out = 0
     with open("books/frankenstein.txt") as f:
@@ -17,8 +22,8 @@ def main():
         for word in words:
             out +=1
         
-        print(word_count(file_contents))
-    print(out)
+    print(f"{out} words found in the decument")
+    letter_sort(word_count(file_contents))
             
     
 
